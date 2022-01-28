@@ -74,6 +74,7 @@
               <buildArgs>
                 <buildArg>--no-fallback</buildArg>
                 <buildArg>--no-server</buildArg>
+                <buildArg>--initialize-at-build-time=org.junit.platform.engine.TestTag</buildArg>
               </buildArgs>
             </configuration>
           </plugin>
