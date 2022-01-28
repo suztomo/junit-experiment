@@ -1,4 +1,4 @@
-package example;
+package com.example;
 
 import static com.google.common.truth.Truth.assertThat;
 
