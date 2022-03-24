@@ -10,6 +10,8 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>child-project</module>
+    <module>child-project-2</module>
+    <module>child-project-3</module>
   </modules>
 
   <properties>
@@ -45,6 +47,11 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.22.0</version>
+        <configuration>
+          <systemPropertyVariables>
+            <my.prop>hello</my.prop>
+          </systemPropertyVariables>
+        </configuration>
       </plugin>
     </plugins>
   </build>
@@ -74,8 +81,19 @@
               <buildArgs>
                 <buildArg>--no-fallback</buildArg>
                 <buildArg>--no-server</buildArg>
-                <buildArg>--initialize-at-build-time=org.junit.platform.engine.TestTag</buildArg>
+                <buildArg>--initialize-at-build-time=com.example.ParallelParameterized,com.example.SimpleTest,com.google.common.collect.ImmutableList,com.google.common.collect.RegularImmutableList,com.example.ParallelParameterized$ParallelScheduler,com.google.common.base.Preconditions,com.google.gson.internal.Excluder,com.google.gson.internal.JavaVersion,com.google.gson.internal.bind.NumberTypeAdapter,com.google.gson.internal.reflect.ReflectionAccessor,com.google.gson.internal</buildArg>
+                <buildArg>--trace-class-initialization=java.nio.file.FileSystems</buildArg>
               </buildArgs>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.0</version>
+            <configuration>
+              <systemPropertyVariables>
+                <my.prop>hello</my.prop>
+              </systemPropertyVariables>
             </configuration>
           </plugin>
         </plugins>

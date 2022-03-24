@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Vintage" tests="1" skipped="0" failures="0" errors="0" time="0.001" hostname="mpeddada.nyc.corp.google.com" timestamp="2022-01-28T17:46:14">
+<properties>
+<property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+<property name="file.encoding" value="UTF-8"/>
+<property name="file.separator" value="/"/>
+<property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+<property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+<property name="java.class.path" value=""/>
+<property name="java.class.version" value="55.0"/>
+<property name="java.endorsed.dirs" value=""/>
+<property name="java.ext.dirs" value=""/>
+<property name="java.io.tmpdir" value="/tmp"/>
+<property name="java.library.path" value="/usr/lib/mesa-diverted/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu/mesa:/usr/lib/x86_64-linux-gnu/dri:/usr/lib/x86_64-linux-gnu/gallium-pipe:/usr/lib64:/lib64:/lib:/usr/lib"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="11"/>
+<property name="java.vendor" value="Oracle Corporation"/>
+<property name="java.vendor.url" value="https://www.graalvm.org/"/>
+<property name="java.version" value="11.0.13"/>
+<property name="java.vm.name" value="Substrate VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="11"/>
+<property name="java.vm.vendor" value="Oracle Corporation"/>
+<property name="java.vm.version" value="GraalVM 21.3.0 Java 11 CE"/>
+<property name="jdk.lang.Process.launchMechanism" value="FORK"/>
+<property name="line.separator" value="
+"/>
+<property name="my.prop" value="hello"/>
+<property name="org.graalvm.nativeimage.imagecode" value="runtime"/>
+<property name="org.graalvm.nativeimage.kind" value="executable"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Linux"/>
+<property name="os.version" value="5.10.46-5rodete1-amd64"/>
+<property name="path.separator" value=":"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.jnu.encoding" value="UTF-8"/>
+<property name="user.dir" value="/usr/local/google/home/mpeddada/IdeaProjects/native-image-experiments/junit-experiment"/>
+<property name="user.home" value="/usr/local/google/home/mpeddada"/>
+<property name="user.name" value="mpeddada"/>
+<property name="user.timezone" value="America/New_York"/>
+</properties>
+<testcase name="simpleTest" classname="com.example.SimpleTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:com.example.SimpleTest]/[test:simpleTest(com.example.SimpleTest)]
+display-name: simpleTest
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]
+display-name: JUnit Vintage
+]]></system-out>
+</testsuite>
