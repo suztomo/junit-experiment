@@ -1,5 +1,24 @@
 # junit-experiment
-Experiment with Junit annotations and tags for native image testing
+## child-project-2 : Testing with FileSystemProvider
+To run the application, we call `mvn test -P native`.
+To reproduce the issue, delete the contents of the `main/resources/META-INF/native-image/native-image.properties` file.
+
+We will see the following error at image build time:
+```
+Error: Classes that should be initialized at run time got initialized during image building:
+ com.example.MySampleFileSystemProvider was unintentionally initialized at build time. To see why com.example.MySampleFileSystemProvider got initialized use --trace-class-initialization=com.example.MySampleFileSystemProvider
+```
+Now, if we add --initialize-at-run-time=com.example.MySampleFileSystemProvider, we will see the following error:
+
+```
+Error: The class com.example.MySampleFileSystemProvider has already been initialized (from file:///usr/local/google/home/mpeddada/IdeaProjects/native-image-experiments/junit-experiment/child-project-2/target/classes/META-INF/native-image/native-image.properties with 'com.example.MySampleFileSystemProvider'); it is too late to register com.example.MySampleFileSystemProvider for build-time initialization. To see why com.example.MySampleFileSystemProvider got initialized use --trace-class-initialization=com.example.MySampleFileSystemProvider
+```
+
+Including `--initialize-build-time=com.example.MySampleFileSystemProvider` results in a **successful build**.
+
+
+## child-project-3 : Testing with Category tag
+Experiment with Junit annotations and tags for native image testing.
 
 To run the application, we call `mvn test -P native`.
 
