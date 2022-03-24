@@ -81,8 +81,6 @@
               <buildArgs>
                 <buildArg>--no-fallback</buildArg>
                 <buildArg>--no-server</buildArg>
-                <buildArg>--initialize-at-build-time=com.example.ParallelParameterized,com.example.SimpleTest,com.google.common.collect.ImmutableList,com.google.common.collect.RegularImmutableList,com.example.ParallelParameterized$ParallelScheduler,com.google.common.base.Preconditions,com.google.gson.internal.Excluder,com.google.gson.internal.JavaVersion,com.google.gson.internal.bind.NumberTypeAdapter,com.google.gson.internal.reflect.ReflectionAccessor,com.google.gson.internal</buildArg>
-                <buildArg>--trace-class-initialization=java.nio.file.FileSystems</buildArg>
               </buildArgs>
             </configuration>
           </plugin>
