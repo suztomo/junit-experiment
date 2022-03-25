@@ -5,13 +5,7 @@ import static com.google.common.truth.Truth.assertThat;
 import com.google.cloud.storage.StorageOptions;
 import com.google.cloud.storage.testing.RemoteStorageHelper;
 import com.google.common.truth.Correspondence;
-import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.spi.FileSystemProvider;
-import java.util.List;
 import java.util.ServiceLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -59,5 +53,11 @@ public class SimpleTest {
             Correspondence.transforming(
                 (FileSystemProvider provider) -> provider.getScheme(), "with its scheme equals "))
         .contains("gs");
+  }
+
+  @Test
+  public void testFoo() {
+    assertThat(FooClass.class.getName()).isEqualTo("com.example.FooClass");
+    System.out.println(FooClass.d);
   }
 }
